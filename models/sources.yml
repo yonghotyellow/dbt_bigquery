@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ny_taxi
+    database: "{{ env_var('DBT_BIGQUERY_PROJECT', 'vmware-dezoomcamp') }}"
+    schema: "{{ env_var('DBT_BIGQUERY_SOURCE_DATASET', 'ny_taxi') }}"
+    tables:
+      - name: green_taxi_external
+      - name: yellow_taxi_external
+      - name: fhv_taxi_external
