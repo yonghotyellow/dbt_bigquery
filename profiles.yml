@@ -1,0 +1,11 @@
+my_bigquery:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: vmware-dezoomcamp
+      dataset: ny_taxi
+      threads: 4
+      keyfile: "D:/hieu/DE_Zoomcamp/cohorts/2025/04-analytics-engineering/dbt_bigquery/credentials/service_account.json"
+      location: asia-east1
